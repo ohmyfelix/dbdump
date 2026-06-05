@@ -1,7 +1,7 @@
 DOCKER_IMAGE=dockette/dbdump
 DOCKER_VERSION?=mariadb-11-8
 DOCKER_TAG?=${DOCKER_VERSION}
-DOCKER_VERSIONS=mariadb-10-2 mariadb-10-4 mariadb-10-6 mariadb-10-11 mariadb-11-1 mariadb-11-2 mariadb-11-4 mariadb-11-5 mariadb-11-7 mariadb-11-8
+DOCKER_VERSIONS=mariadb-10-2 mariadb-10-4 mariadb-10-5 mariadb-10-6 mariadb-10-11 mariadb-11-1 mariadb-11-2 mariadb-11-4 mariadb-11-5 mariadb-11-7 mariadb-11-8
 
 
 .PHONY: build

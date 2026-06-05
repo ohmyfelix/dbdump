@@ -22,6 +22,7 @@ jobs:
         include:
           - item: mariadb-10-2
           - item: mariadb-10-4
+          - item: mariadb-10-5
           - item: mariadb-10-6
           - item: mariadb-10-11
           - item: mariadb-11-1
@@ -48,7 +49,7 @@ jobs:
           tags: "dockette/dbdump:${{ matrix.item }}"
 
       - name: "Test image"
-        run: "make test VERSION=${{ matrix.item }} DOCKER_TAG=${{ matrix.item }}"
+        run: "make test DOCKER_VERSION=${{ matrix.item }} DOCKER_TAG=${{ matrix.item }}"
 
   build:
     name: "Build"
@@ -64,6 +65,7 @@ jobs:
         include:
           - item: mariadb-10-2
           - item: mariadb-10-4
+          - item: mariadb-10-5
           - item: mariadb-10-6
           - item: mariadb-10-11
           - item: mariadb-11-1

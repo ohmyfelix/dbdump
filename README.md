@@ -8,7 +8,7 @@
 </p>
 
 <p align=center>
-   Ready-to-use MariaDB / MySQL / PostgreSQL dumper.
+   Ready-to-use MariaDB / MySQL dumper.
 </p>
 
 -----
@@ -21,13 +21,14 @@ docker run \
     --rm \
     -v /data/yourdb:/var/lib/mysql \
     dockette/dbdump:mariadb-10-11 \
-    mysqldump -u root --password=root yourdb > dump.sql
+    mysqldump -u root --password=docker yourdb > dump.sql
 ```
 
 **Images**
 
 - dockette/dbdump:mariadb-10-2
 - dockette/dbdump:mariadb-10-4
+- dockette/dbdump:mariadb-10-5
 - dockette/dbdump:mariadb-10-6
 - dockette/dbdump:mariadb-10-11
 - dockette/dbdump:mariadb-11-1
@@ -43,6 +44,9 @@ docker run \
 make build
 make test
 make run
+make build-all
+make test-all
+make mariadb-11-8
 ```
 
 ## Maintenance
